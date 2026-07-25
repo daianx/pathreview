@@ -42,27 +42,12 @@ This is a feature gap. Adding a red teaming prompt injection test suite will all
 ### Check-in 1 (mid-week)
 
 **Current progress:**
-Added the tests and updated the make test command to run the new tests. Running `make check` results in an exit code 1 and is failing to build the Python API documentation (184 errors). This is unrelated to my changes and appears to be an existing issue. Running `make test-unit` results in exit code 1 and is failing due to failing 53 existing unit tests (from modules such as bias_detector, faithfulness_checker, resume_parser, tech_detector, and more). All the tests I added do not introduce any new failures.
+Added the fixture files and test module to test prompt injection defenses. Updated the make test command to run the new tests. Running `make check` results in an exit code 1 and is failing to build the Python API documentation (184 errors). This is unrelated to my changes and appears to be an existing issue. Running `make test-unit` results in exit code 1 and is failing due to failing 53 existing unit tests (from modules such as bias_detector, faithfulness_checker, resume_parser, tech_detector, and more). All the tests I added do not introduce any new failures. Added the CI job to run the tests on every PR that touches safety/.
 
 **Next steps:**
-Add the CI job to run the tests on every PR that touches safety/.
+Create tests in Test-setup.md to see if the features are working as expected.
 
 **Blockers:**
 Nothing
 
 ---
-
-### Check-in 2 (end of week)
-
-**PR link:** [link to your submitted pull request]
-
-**Branch:** [`feat/71-implement-prompt-injection-test-suite`]
-**What you built:**
-[1–3 sentences summarizing what your fix does and how it works]
-
-**Tests added or updated:**
-[Which test files did you touch? What do they cover?]
-
-**Self-review confirmation:** [ ] make check passes  [ ] make test-unit passes
-
-**Draft PR feedback received from:** [name or Slack handle, or "none"]
