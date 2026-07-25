@@ -27,3 +27,12 @@ There are related issues that are not in scope for this change to add the integr
 **Setup confirmation:** [X] App runs locally at localhost:5173
 
 **Cohort ledger:** [X] Issue added to cohort ledger
+
+## Week 8 — Reproduction & solution planning
+
+**Reproduction commit link:** [https://github.com/daianx/pathreview/commit/a6400b1bb4f7d0ab89cfddc9339adcf9c0e8f533]
+
+**Reproduction summary:**
+This is a feature gap. Adding a red teaming prompt injection test suite will allow us to test the project's defenses against prompt injection attacks. The `tests/fixtures/injection_attempts/` directory is currently empty and the `tests/security/test_prompt_injection.py` file does not exist yet. A new job will also need to be added to `.github/workflows/ci.yml` to run the tests on every PR that touches `safety/`.
+
+**PLAN.md link:** [https://github.com/daianx/pathreview/blob/feat/71-implement-prompt-injection-test-suite/PLAN.md]
