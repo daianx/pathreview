@@ -1,4 +1,4 @@
-Missing file"""Red-teaming security test suite for prompt injection defense."""
+"""Red-teaming security test suite for prompt injection defense."""
 
 import json
 from pathlib import Path
