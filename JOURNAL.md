@@ -54,7 +54,7 @@ Nothing
 
 ### Check-in 2 (end of week)
 
-**PR link:** [https://github.com/daianx/pathreview/pulls]
+**PR link:** [https://github.com/ascherj/pathreview/pull/419]
 
 **Branch:** [`feat/71-implement-prompt-injection-test-suite`]
 **What you built:**
