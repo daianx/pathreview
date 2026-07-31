@@ -51,3 +51,22 @@ Create tests in Test-setup.md to see if the features are working as expected.
 Nothing
 
 ---
+
+### Check-in 2 (end of week)
+
+**PR link:** [https://github.com/daianx/pathreview/pulls]
+
+**Branch:** [`feat/71-implement-prompt-injection-test-suite`]
+**What you built:**
+Implemented an automated red-teaming security test suite for prompt injection defense (`safety/prompt_defense.py`). Built a curated corpus of 106 attack cases across 14 categories and 12 benign cases in `tests/fixtures/injection_attempts/`. Integrated a new `test-security` job into `.github/workflows/ci.yml` and `Makefile` to run security tests on every PR touching `safety/`.
+
+**Tests added or updated:**
+
+- `tests/security/test_prompt_injection.py`: Parameterized security test suite asserting static detection, schema integrity, unique fixture IDs, and mechanism behavior.
+- `tests/fixtures/injection_attempts/*.json`: 15 category fixture files containing curated attack and benign payloads.
+
+**Self-review confirmation:**
+[X] make check passes  
+[X] make test-unit passes
+
+**Draft PR feedback received from:** none
