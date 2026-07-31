@@ -70,3 +70,34 @@ Implemented an automated red-teaming security test suite for prompt injection de
 [X] make test-unit passes
 
 **Draft PR feedback received from:** none
+
+## Week 10 — Iteration & reflection
+
+### Reviewer feedback
+
+**Feedback received:** [ ] Yes  [X] No feedback
+
+**Summary of feedback:**
+No feedback needed for Summer 2026
+
+**How you responded:**
+No feedback needed for Summer 2026
+
+---
+
+### Reflection
+
+**What was harder than you expected?**
+Categorizing and curating realistic prompt injection payloads (e.g., zero-width obfuscation, indirect resume injection, multi-field injection) while ensuring the test suite ran purely statically without dependencies on live LLM calls. Additionally, isolating pre-existing test/build failures in the repository (such as API doc build errors during `make check`) from my newly introduced security suite required extra care.
+
+**What did you learn about working in a large codebase?**
+I learned the importance of respecting architectural boundaries and reusing pre-existing conventions. For example, identifying that `pyproject.toml` already had a reserved `@pytest.mark.security` marker allowed me to align the new red-teaming suite seamlessly with the existing testing architecture without introducing redundant configurations or breaking out-of-scope modules.
+
+**How did AI tools help — and where did they fall short?**
+AI tools were incredibly useful for generating synthetic attack payloads across diverse categories (such as multilingual bypasses, context burial, and role-switching). AI fell short when making incremental updates to the branch. AI tended to update (or delete) multiple files at once and needed instruction on the exact files to make changes to and what not to touch.
+
+**What would you do differently if you started over?**
+I would look at other repositories and libraries for red-team prompt injection test suite examples to get ideas for the structure and implementation strategy. I would also make sure to review the projects README and contributing guidelines to better understand the project's architecture and conventions before starting implementation.
+
+**What are you most proud of from this module?**
+Building a comprehensive, highly organized corpus of 106 attack cases across 14 categories along with 12 benign control cases. I am also proud to have created the plan for implementing the security test suite.
